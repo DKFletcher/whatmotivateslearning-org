@@ -1,7 +1,5 @@
 import React from 'react'
-import GatsbyIcon from '../../assets/vectors/gatsby.svg'
-import AmplifyIcon from '../../assets/vectors/amplify.svg'
-import CognitoIcon from '../../assets/vectors/cognito.svg'
+import WMLIcon from '../../images/icon-512.png'
 
 const IndexPage = () => {
   return (
@@ -14,11 +12,7 @@ const IndexPage = () => {
         margin: '0 40px'
       }}
     >
-      <GatsbyIcon />
-      <p style={{ fontSize: 48, padding: 20 }}>+</p>
-      <AmplifyIcon />
-      <p style={{ fontSize: 48, padding: 20 }}>+</p>
-      <CognitoIcon />
+      <WMLIcon />
     </div>
   )
 }

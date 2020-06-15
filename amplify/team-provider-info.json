@@ -1,0 +1,20 @@
+{
+    "wmldev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-wml-wmldev-115132-authRole",
+            "UnauthRoleArn": "arn:aws:iam::791511521153:role/amplify-wml-wmldev-115132-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::791511521153:role/amplify-wml-wmldev-115132-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-wml-wmldev-115132-deployment",
+            "UnauthRoleName": "amplify-wml-wmldev-115132-unauthRole",
+            "StackName": "amplify-wml-wmldev-115132",
+            "StackId": "arn:aws:cloudformation:us-east-1:791511521153:stack/amplify-wml-wmldev-115132/04fcf730-ae2d-11ea-9425-0ec9495d5707",
+            "AmplifyAppId": "d1hdtcsfbrbi6k"
+        },
+        "categories": {
+            "auth": {
+                "wml2db2f068": {}
+            }
+        }
+    }
+}

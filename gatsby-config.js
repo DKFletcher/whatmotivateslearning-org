@@ -39,5 +39,17 @@ module.exports = {
         cookieDomain: "https://authenticaysh.netlify.com/",
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `whatmotivateslearning.org`,
+        short_name: `wml`,
+        start_url: `/`,
+        background_color: `#f1f1f1`,
+        theme_color: `#c15700`,
+        display: `minimal_ui`,
+        icon: `src/images/icon.png`
+      }
+    },
   ],
 }
