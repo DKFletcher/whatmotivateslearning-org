@@ -3,19 +3,26 @@ module.exports = {
     title: 'Gatsby Auth Starter AWS Amplify',
   },
   plugins: [
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/assets/images`,
-        name: 'images',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     path: `${__dirname}/src/assets/images`,
+    //     name: 'images',
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /vectors/,
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
     `gatsby-plugin-netlify`,
