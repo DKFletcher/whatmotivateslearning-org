@@ -20,8 +20,9 @@ module.exports = {
     },
     `gatsby-plugin-netlify`,
     `gatsby-plugin-sass`,
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

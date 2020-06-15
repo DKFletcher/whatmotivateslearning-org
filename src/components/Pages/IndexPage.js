@@ -12,7 +12,6 @@ const IndexPage = () => {
         margin: '0 40px'
       }}
     >
-      <WMLIcon />
     </div>
   )
 }
