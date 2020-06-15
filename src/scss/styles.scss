@@ -59,6 +59,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  background-color: light;
 }
 
 * {
@@ -116,4 +117,19 @@ img:hover {
   );
   height: calc(100vh - 100px);
   width: 100vw;
+}
+
+.app-body{
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $soft-and-mellow;
+  color: $whale;
+  height: 100vh;
+}
+
+.nav-bar-container{
+  background-color: $gray-200;
 }
