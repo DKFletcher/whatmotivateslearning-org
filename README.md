@@ -12,6 +12,6 @@ whatmotivateslearning.com is moving toward a more formal non-profit structure. A
 
 This is where you will find all the code for the new service, and this repo will be the hub. The proposed new features are:
 
-* AWS CloudFormation Services
+* AWS Cloud
 * Localization surface via react-i18next
 * A PWA compliant JAMStack
