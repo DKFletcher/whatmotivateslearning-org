@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import WMLIcon from '../../images/icon-512.png'
 
 const IndexPage = props => {
   const indexQuery = useStaticQuery(graphql`
