@@ -1,29 +1,28 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-// import Img from 'gatsby-image'
+import React from "react"
+import { graphql, Link } from "gatsby"
 
-// import Layout from '../components/layout'
-// import SEO from '../components/seo'
 
-class StandardTemplate extends React.Component {
+import {AppContent} from "../components/Layout"
+// import SEO from "../components/seo"
+
+class Template extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
+
     return (
-      <div>
-        <header>
-          <h3>H3 Header Test</h3>
-        </header>
-        <main>
-          <h1>H1 Main Test</h1>
-        </main>
-      </div>
+
+    <div className="container-login100">
+    <AppContent>
+    <div
+      className="post-content-body"
+      dangerouslySetInnerHTML={{ __html: post.html }}
+    />
+      </AppContent>
+    </div>
     )
   }
 }
-
-export default StandardTemplate
-
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
@@ -37,14 +36,9 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
 `
-// thumbnail {
-//   childImageSharp {
-//     fluid(maxWidth: 1360) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
+
