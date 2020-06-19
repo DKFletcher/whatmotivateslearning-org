@@ -3,12 +3,12 @@ import { graphql, useStaticQuery } from "gatsby"
 import {AppContent} from "../components/Layout"
 
 const Template = props => {
-  const { children } = props
-  console.log('children:', children)
+  const { html } = props
+  console.log('children:', html)
 return (
 <div className="container-login100">
   <AppContent>
-  <div><h1>Dummy</h1></div>
+  <div dangerouslySetInnerHTML={{ __html: html }}/>
   </AppContent>
 </div>
 )}

@@ -57,7 +57,8 @@ const App = () => {
         <PrivateRoute 
           key={node.id}
           path={path}
-          component={Template} 
+          component={Template}
+          html={node.html}
         />
        )})}
     </Router>

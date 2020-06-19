@@ -15,10 +15,10 @@ class PrivateRoute extends React.Component {
     if (!isLoggedIn()) {
       return <Redirect to="/signin" noThrow />
     }
-    const { component: Component, location, ...rest } = this.props
+    const { component: Component, html,  location, ...rest } = this.props
     return (
       <Layout isUserNav={true}>
-        <Component {...rest} />
+        <Component {...rest} html={html}/>
       </Layout>
     )
   }
