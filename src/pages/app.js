@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby'
 import { Router } from '@reach/router'
 import {
   Profile,
@@ -18,30 +18,30 @@ import Template from '../templates/standard-template'
 const App = () => {
   Amplify.configure(config)
   const markdown = useStaticQuery(graphql`
-  query {
-    site {
-      siteMetadata {
-        title
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+      allMarkdownRemark {
+        edges {
+          node {
+            id
+            excerpt(pruneLength: 160)
+            html
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              date(formatString: "MMMM DD, YYYY")
+            }
+          }
+        }
       }
     }
-   allMarkdownRemark{
-     edges{
-       node{
-         id
-         excerpt(pruneLength: 160)
-         html
-         fields {
-          slug
-        }
-         frontmatter {
-           title
-           date(formatString: "MMMM DD, YYYY")
-         }
-       }
-     }
-    }
-  }
-`)
+  `)
   return (
     <Router>
       <PrivateRoute path="/home" component={Home} />
@@ -51,13 +51,19 @@ const App = () => {
       <PublicRoute path="/reset" component={Reset} />
       <PublicRoute path="/" component={IndexPage} />
       {markdown.allMarkdownRemark.edges.map(({node})=>{
-        return (
-          <PublicRoute path={node.fields.slug} component={Template} />
-        )})
-      }
-      <PrivateRoute path="/markdown" children={MarkdownTest} />
+       return (
+        <PrivateRoute 
+          key={node.id}
+          path="/test" 
+          component={Template} 
+        />
+       )})}
     </Router>
   )
 }
 
 export default App
+
+//     <PublicRoute path="/test" component={<Template children={node.fields.html} title="test"/>
+//   } />
+// }
