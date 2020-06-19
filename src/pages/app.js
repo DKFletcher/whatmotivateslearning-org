@@ -17,6 +17,7 @@ import config from '../aws-exports'
 import Template from '../templates/standard-template'
 const App = () => {
   Amplify.configure(config)
+  var count=0;
   const markdown = useStaticQuery(graphql`
     query {
       site {
@@ -51,10 +52,11 @@ const App = () => {
       <PublicRoute path="/reset" component={Reset} />
       <PublicRoute path="/" component={IndexPage} />
       {markdown.allMarkdownRemark.edges.map(({node})=>{
+        let path ="/test"+String(count++)
        return (
         <PrivateRoute 
           key={node.id}
-          path="/test" 
+          path={path}
           component={Template} 
         />
        )})}
@@ -63,7 +65,3 @@ const App = () => {
 }
 
 export default App
-
-//     <PublicRoute path="/test" component={<Template children={node.fields.html} title="test"/>
-//   } />
-// }
