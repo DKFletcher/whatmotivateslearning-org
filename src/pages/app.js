@@ -37,6 +37,7 @@ const App = () => {
             frontmatter {
               title
               date(formatString: "MMMM DD, YYYY")
+              lang
             }
           }
         }
@@ -52,6 +53,8 @@ const App = () => {
       <PublicRoute path="/reset" component={Reset} />
       <PublicRoute path="/" component={IndexPage} />
       {markdown.allMarkdownRemark.edges.map(({node})=>{
+        console.log("slug: ",node.fields.slug,"    lang: ", node.frontmatter.lang);
+        
         let path ="/test"+String(count++)
        return (
         <PrivateRoute 
